@@ -1,0 +1,2 @@
+class Rubygem < ApplicationRecord
+end
