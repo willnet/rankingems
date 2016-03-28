@@ -15,6 +15,6 @@ class CreateRubygems < ActiveRecord::Migration[5.0]
       t.text :licenses, array: true, default: []
       t.timestamps
     end
-    add_index :rubygems, :name
+    add_index :rubygems, :name, unique: true
   end
 end

@@ -24,7 +24,7 @@
 #
 # ### Indexes
 #
-# * `index_rubygems_on_name`:
+# * `index_rubygems_on_name` (_unique_):
 #     * **`name`**
 #
 
