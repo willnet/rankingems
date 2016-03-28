@@ -29,4 +29,25 @@
 #
 
 class Rubygem < ApplicationRecord
+  class << self
+    ATTRIBUTES_FROM_API = %w(
+      name version authors project_uri gem_uri
+      homepage_uri wiki_uri documentation_uri mailing_list_uri source_code_uri
+      bug_tracker_uri licenses
+    )
+
+    def latest_update!
+      updated_gems_from_api = Gems.just_updated
+      updating_gems = updated_gems_from_api.reject do |gem|
+        where(name: gem['name'], version: gem['version']).exists?
+      end
+      updating_gems.each do |gem|
+        rubygem = find_or_initialize_by(name: gem['name'])
+        ATTRIBUTES_FROM_API.each do |attr|
+          rubygem.send("#{attr}=", gem[attr])
+        end
+        rubygem.save!
+      end
+    end
+  end
 end
