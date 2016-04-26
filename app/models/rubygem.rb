@@ -38,16 +38,34 @@ class Rubygem < ApplicationRecord
 
     def latest_update!
       updated_gems_from_api = Gems.just_updated
-      updating_gems = updated_gems_from_api.reject do |gem|
-        where(name: gem['name'], version: gem['version']).exists?
+      updating_gems = updated_gems_from_api.reject do |gem_info|
+        where(name: gem_info['name'], version: gem_info['version']).exists?
       end
-      updating_gems.each do |gem|
-        rubygem = find_or_initialize_by(name: gem['name'])
-        ATTRIBUTES_FROM_API.each do |attr|
-          rubygem.send("#{attr}=", gem[attr])
-        end
-        rubygem.save!
+      updating_gems.each do |gem_info|
+        create_or_update!(gem_info)
       end
+    end
+
+    def create_or_udpate_from_name(name)
+      gem_info = Gems.info(name)
+      if gem_info.class == String
+        puts "'#{name}' is not found"
+        return
+      end
+      if where(name: gem_info['name'], version: gem_info['version']).exists?
+        return
+      end
+      create_or_update!(gem_info)
+    end
+
+    private
+
+    def create_or_update!(gem_info)
+      rubygem = find_or_initialize_by(name: gem_info['name'])
+      ATTRIBUTES_FROM_API.each do |attr|
+        rubygem.send("#{attr}=", gem_info[attr])
+      end
+      rubygem.save!
     end
   end
 end
