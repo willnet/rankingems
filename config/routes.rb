@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'welcome#index'
-  get '/auth/:provider/callback' => 'auths#create'
-  get '/auth/failure' => 'auths#failure'
-  get '/logout' => 'auths#destroy', as: :logout
+  get '/auth/:provider/callback' => 'sessions#create'
+  get '/auth/failure' => 'sessions#failure'
+  get '/logout' => 'sessions#destroy', as: :logout
 end
