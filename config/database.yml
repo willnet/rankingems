@@ -8,8 +8,8 @@ default: &default
 
 development:
   <<: *default
-  database: savanna_development
+  database: rankingems_development
 
 test:
   <<: *default
-  database: savanna_test
+  database: rankingems_test
