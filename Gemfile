@@ -14,6 +14,8 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5.x'
 gem 'jbuilder', '~> 2.0'
 gem 'gems'
+gem 'omniauth'
+gem 'omniauth-github'
 
 group :development, :test do
   gem 'byebug'
