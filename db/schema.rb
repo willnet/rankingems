@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160321080141) do
+ActiveRecord::Schema.define(version: 20160430115631) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,5 +34,13 @@ ActiveRecord::Schema.define(version: 20160321080141) do
   end
 
   add_index "rubygems", ["name"], name: "index_rubygems_on_name", unique: true, using: :btree
+
+  create_table "users", force: :cascade do |t|
+    t.string   "github_uid"
+    t.string   "github_name"
+    t.boolean  "admin",       default: false, null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
 
 end
