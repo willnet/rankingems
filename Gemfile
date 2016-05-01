@@ -16,6 +16,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'gems'
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'bootstrap-sass', '~> 3.3.6'
 
 group :development, :test do
   gem 'byebug'
