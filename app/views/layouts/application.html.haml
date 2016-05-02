@@ -19,8 +19,12 @@
           %a.navbar-brand{ href: '/'} Rankingems
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
-            %li
-              %a{href: '/auth/github'} Sign In
+            - if logged_in?
+              %li
+                %a{href: '/signout'} Sign Out
+            - else
+              %li
+                %a{href: '/auth/github'} Sign In
 
     .container
       = yield
