@@ -30,41 +30,23 @@
 
 class Rubygem < ApplicationRecord
   class << self
-    ATTRIBUTES_FROM_API = %w(
-      name version authors project_uri gem_uri
-      homepage_uri wiki_uri documentation_uri mailing_list_uri source_code_uri
-      bug_tracker_uri licenses
-    )
-
     def latest_update!
-      updated_gems_from_api = Gems.just_updated
-      updating_gems = updated_gems_from_api.reject do |gem_info|
-        where(name: gem_info['name'], version: gem_info['version']).exists?
-      end
-      updating_gems.each do |gem_info|
+      GemInfo.just_updated.reject(&:persisted?).each do |gem_info|
         create_or_update!(gem_info)
       end
     end
 
-    def create_or_udpate_from_name(name)
-      gem_info = Gems.info(name)
-      if gem_info.class == String
-        puts "'#{name}' is not found"
-        return
-      end
-      if where(name: gem_info['name'], version: gem_info['version']).exists?
-        return
-      end
+    def create_or_update_from_name(name)
+      gem_info = GemInfo.info(name)
+      return if gem_info.nil? || gem_info.persisted?
       create_or_update!(gem_info)
     end
 
     private
 
     def create_or_update!(gem_info)
-      rubygem = find_or_initialize_by(name: gem_info['name'])
-      ATTRIBUTES_FROM_API.each do |attr|
-        rubygem.send("#{attr}=", gem_info[attr])
-      end
+      rubygem = find_or_initialize_by(name: gem_info.name)
+      rubygem.attributes = gem_info.attributes
       rubygem.save!
     end
   end
