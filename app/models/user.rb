@@ -9,7 +9,7 @@
 # **`id`**           | `integer`          | `not null, primary key`
 # **`github_uid`**   | `string`           |
 # **`github_name`**  | `string`           |
-# **`admin`**        | `boolean`          | `default("false"), not null`
+# **`admin`**        | `boolean`          | `default(FALSE), not null`
 # **`created_at`**   | `datetime`         | `not null`
 # **`updated_at`**   | `datetime`         | `not null`
 #

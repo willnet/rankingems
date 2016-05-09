@@ -18,7 +18,7 @@
 # **`mailing_list_uri`**   | `string`           |
 # **`source_code_uri`**    | `string`           |
 # **`bug_tracker_uri`**    | `string`           |
-# **`licenses`**           | `text`             | `default("{}"), is an Array`
+# **`licenses`**           | `text`             | `default([]), is an Array`
 # **`created_at`**         | `datetime`         | `not null`
 # **`updated_at`**         | `datetime`         | `not null`
 #

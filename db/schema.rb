@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160430115631) do
+ActiveRecord::Schema.define(version: 20160509102946) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "downloads", force: :cascade do |t|
+    t.integer  "rubygem_id",             null: false
+    t.integer  "count",      default: 0, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["rubygem_id"], name: "index_downloads_on_rubygem_id", using: :btree
+  end
 
   create_table "rubygems", force: :cascade do |t|
     t.string   "name",                           null: false
@@ -31,9 +39,8 @@ ActiveRecord::Schema.define(version: 20160430115631) do
     t.text     "licenses",          default: [],              array: true
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
+    t.index ["name"], name: "index_rubygems_on_name", unique: true, using: :btree
   end
-
-  add_index "rubygems", ["name"], name: "index_rubygems_on_name", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "github_uid"
