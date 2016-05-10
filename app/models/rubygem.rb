@@ -29,6 +29,8 @@
 #
 
 class Rubygem < ApplicationRecord
+  has_many :downloads
+
   class << self
     def latest_update!
       GemInfo.just_updated.reject(&:persisted?).each do |gem_info|
@@ -49,5 +51,10 @@ class Rubygem < ApplicationRecord
       rubygem.attributes = gem_info.attributes
       rubygem.save!
     end
+  end
+
+  def save_total_download_count!
+    download_info = Gems.total_downloads(name)
+    downloads.create!(count: download_info[:total_downloads])
   end
 end

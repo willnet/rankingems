@@ -19,4 +19,5 @@
 #
 
 class Download < ApplicationRecord
+  belongs_to :rubygem
 end
