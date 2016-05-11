@@ -13,6 +13,7 @@ class CreateRubygems < ActiveRecord::Migration[5.0]
       t.string :source_code_uri
       t.string :bug_tracker_uri
       t.text :licenses, array: true, default: []
+      t.references :category
       t.timestamps
     end
     add_index :rubygems, :name, unique: true

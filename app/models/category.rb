@@ -13,4 +13,5 @@
 #
 
 class Category < ApplicationRecord
+  has_many :rubygems
 end

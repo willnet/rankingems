@@ -19,17 +19,21 @@
 # **`source_code_uri`**    | `string`           |
 # **`bug_tracker_uri`**    | `string`           |
 # **`licenses`**           | `text`             | `default([]), is an Array`
+# **`category_id`**        | `integer`          |
 # **`created_at`**         | `datetime`         | `not null`
 # **`updated_at`**         | `datetime`         | `not null`
 #
 # ### Indexes
 #
+# * `index_rubygems_on_category_id`:
+#     * **`category_id`**
 # * `index_rubygems_on_name` (_unique_):
 #     * **`name`**
 #
 
 class Rubygem < ApplicationRecord
   has_many :downloads
+  belongs_to :category, optional: true
 
   class << self
     def latest_update!

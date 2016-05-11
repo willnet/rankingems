@@ -43,8 +43,10 @@ ActiveRecord::Schema.define(version: 20160511132055) do
     t.string   "source_code_uri"
     t.string   "bug_tracker_uri"
     t.text     "licenses",          default: [],              array: true
+    t.integer  "category_id"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
+    t.index ["category_id"], name: "index_rubygems_on_category_id", using: :btree
     t.index ["name"], name: "index_rubygems_on_name", unique: true, using: :btree
   end
 
