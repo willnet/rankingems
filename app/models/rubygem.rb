@@ -62,4 +62,14 @@ class Rubygem < ApplicationRecord
     download_info = Gems.total_downloads(name)
     downloads.create!(count: download_info[:total_downloads])
   end
+
+  def update_download_count_for_ranking!
+    duration = 1.month
+    old_download = downloads.where('created_at >= ?', duration.ago)
+                            .order(created_at: :desc).first
+    raise 'Batch of download count is something wrong' unless old_download
+    latest_download = downloads.order(created_at: :desc).first
+    download_count_in_the_duration = latest_download.count - old_download.count
+    update!(download_count_for_ranking: download_count_in_the_duration)
+  end
 end
