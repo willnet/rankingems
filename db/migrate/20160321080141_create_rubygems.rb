@@ -14,6 +14,7 @@ class CreateRubygems < ActiveRecord::Migration[5.0]
       t.string :bug_tracker_uri
       t.text :licenses, array: true, default: []
       t.references :category
+      t.integer :download_count_for_ranking, null: false, default: 0
       t.timestamps
     end
     add_index :rubygems, :name, unique: true

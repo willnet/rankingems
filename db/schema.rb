@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 20160511132055) do
   end
 
   create_table "rubygems", force: :cascade do |t|
-    t.string   "name",                           null: false
-    t.string   "version",                        null: false
+    t.string   "name",                                    null: false
+    t.string   "version",                                 null: false
     t.string   "authors"
     t.string   "project_uri"
     t.string   "gem_uri"
@@ -42,10 +42,11 @@ ActiveRecord::Schema.define(version: 20160511132055) do
     t.string   "mailing_list_uri"
     t.string   "source_code_uri"
     t.string   "bug_tracker_uri"
-    t.text     "licenses",          default: [],              array: true
+    t.text     "licenses",                   default: [],              array: true
     t.integer  "category_id"
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.integer  "download_count_for_ranking", default: 0,  null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.index ["category_id"], name: "index_rubygems_on_category_id", using: :btree
     t.index ["name"], name: "index_rubygems_on_name", unique: true, using: :btree
   end
