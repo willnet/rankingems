@@ -1,3 +1,2 @@
-rankingems!
-
-= link_to 'login', '/auth/github'
+- @rubygems.each do |rubygem|
+  = link_to rubygem.name, rubygem

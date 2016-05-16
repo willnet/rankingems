@@ -1,0 +1,35 @@
+%h1= @rubygem.name
+
+version
+= @rubygem.version
+
+%br
+
+authors
+= @rubygem.authors
+
+%br
+
+licences
+= @rubygem.licenses.join(',')
+
+%br
+
+download count in 1 month
+= @rubygem.download_count_for_ranking
+
+%br
+
+category
+- if @rubygem.category
+  = link_to @rubygem.category.name, @rubygem.category
+- else
+  N/A
+
+%br
+
+= link_to 'project uri', @rubygem.project_uri
+= link_to 'gem uri', @rubygem.gem_uri
+= link_to 'homepage uri', @rubygem.homepage_uri
+= link_to 'wiki uri', @rubygem.wiki_uri
+= link_to 'documentation uri', @rubygem.documentation_uri

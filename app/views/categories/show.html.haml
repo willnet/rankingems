@@ -1,0 +1,4 @@
+%h1=@category.name
+
+- @category.rubygems.each do |rubygem|
+  = link_to rubygem.name, rubygem
