@@ -5,6 +5,12 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user, :logged_in?
 
+  def authenticate
+    return if logged_in?
+    session[:return_path] = request.fullpath
+    redirect_to '/auth/github'
+  end
+
   private
 
   def current_user

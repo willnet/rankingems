@@ -1,0 +1,10 @@
+%h1= @rubygem.name
+
+current category
+
+= @rubygem.category || 'N/A'
+
+= form_for @rubygem do |f|
+  = f.label :category, 'suggesting category'
+  = f.text_field :category
+  = f.submit
