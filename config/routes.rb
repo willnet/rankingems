@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get '/auth/failure' => 'sessions#failure'
   get '/signout' => 'sessions#destroy', as: :logout
 
-  resources :rubygems
+  resources :rubygems do
+    resources :suggestions, only: :create
+  end
   resources :categories
 end

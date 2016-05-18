@@ -7,5 +7,6 @@ class RubygemsController < ApplicationController
 
   def edit
     @rubygem = Rubygem.find(params[:id])
+    @suggestion = @rubygem.suggestions.build
   end
 end

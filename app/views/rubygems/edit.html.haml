@@ -4,7 +4,8 @@ current category
 
 = @rubygem.category || 'N/A'
 
-= form_for @rubygem do |f|
+= form_for [@rubygem, @suggestion] do |f|
+  = render 'error', model: @suggestion
   = f.label :category, 'suggesting category'
   = f.text_field :category
   = f.submit

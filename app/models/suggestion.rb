@@ -23,4 +23,7 @@
 
 class Suggestion < ApplicationRecord
   belongs_to :rubygem
+  belongs_to :user
+
+  validates :category, presence: true
 end

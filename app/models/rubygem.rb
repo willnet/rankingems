@@ -34,6 +34,7 @@
 
 class Rubygem < ApplicationRecord
   has_many :downloads
+  has_many :suggestions
   belongs_to :category, optional: true
 
   class << self
