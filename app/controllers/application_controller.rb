@@ -11,6 +11,15 @@ class ApplicationController < ActionController::Base
     redirect_to '/auth/github'
   end
 
+  def authenticate_admin
+    authenticate
+    return if performed?
+    unless current_user.admin?
+      session[:return_path] = nil # TODO
+      render '404' # TODO
+    end
+  end
+
   private
 
   def current_user

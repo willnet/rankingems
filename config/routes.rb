@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'admin/index'
-
   root to: 'welcome#index'
   get '/auth/:provider/callback' => 'sessions#create'
   get '/auth/failure' => 'sessions#failure'
@@ -10,4 +8,5 @@ Rails.application.routes.draw do
     resources :suggestions, only: :create
   end
   resources :categories
+  resources :admin
 end
