@@ -12,12 +12,13 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate_admin
-    authenticate
-    return if performed?
-    unless current_user.admin?
-      session[:return_path] = nil # TODO
-      render '404' # TODO
+    unless logged_in?
+      authenticate
+      return
     end
+    return if current_user.admin?
+
+    render 'errors/not_found', status: 404
   end
 
   private
