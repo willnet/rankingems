@@ -1,0 +1,43 @@
+!!!
+%html
+  %head
+    %title Rankingems
+    %meta{ charset: 'utf-8'}
+    %meta{ content: 'width=device-width, initial-scale=1.0', name: 'viewport' }
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
+    = csrf_meta_tags
+  %body
+    %nav.navbar.navbar-default.navigation
+      .container
+        .navbar-header
+          %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand{ href: '/'} Rankingems
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          %ul.nav.navbar-nav.navbar-right
+            - if logged_in?
+              %li
+                %a{href: '/signout'} Sign Out
+            - else
+              %li
+                %a{href: '/auth/github'} Sign In
+    - if flash[:notice]
+      .alert.alert-success.fade.in.js-flash-notice
+        .container
+          = flash[:notice]
+          %button.close{"data-dismiss" => "alert", "data-target" => ".js-flash-notice", :type => "button"}
+            %span{"aria-hidden" => "true"} ×
+            %span.sr-only Close
+    - if flash[:alert]
+      .alert.alert-danger.fade.in.js-flash-danger
+        .container
+          = flash[:alert]
+          %button.close{"data-dismiss" => "alert", "data-target" => ".js-flash-danger", :type => "button"}
+            %span{"aria-hidden" => "true"} ×
+            %span.sr-only Close
+    .container
+      = yield
