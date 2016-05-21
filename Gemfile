@@ -17,6 +17,7 @@ gem 'gems'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'rambulance'
 
 group :development, :test do
   gem 'byebug'
