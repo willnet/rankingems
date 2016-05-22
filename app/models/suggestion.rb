@@ -26,4 +26,6 @@ class Suggestion < ApplicationRecord
   belongs_to :user
 
   validates :category, presence: true
+
+  enum status: { init: 0, resolved: 10, rejected: 20 }
 end

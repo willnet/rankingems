@@ -1,2 +1,12 @@
-%h1 Admin#index
-%p Find me in app/views/admin/index.html.haml
+- @suggestions.each do |suggestion|
+  = suggestion.rubygem.name
+  %br
+  now category:
+  = suggestion.rubygem.category
+  %br
+  suggested category:
+  = suggestion.category
+  %br
+  by
+  = suggestion.user.github_name
+  %br
