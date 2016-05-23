@@ -1,5 +1,5 @@
 - @suggestions.each do |suggestion|
-  = suggestion.rubygem.name
+  = link_to suggestion.rubygem.name, suggestion.rubygem
   %br
   now category:
   = suggestion.rubygem.category
@@ -10,3 +10,6 @@
   by
   = suggestion.user.github_name
   %br
+  = form_for [:admin, suggestion] do |f|
+    = f.submit 'Accept', name: 'accept'
+    = f.submit 'Reject', name: 'reject'

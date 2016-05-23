@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    get 'suggestions/update'
+  end
+
   root to: 'welcome#index'
   get '/auth/:provider/callback' => 'sessions#create'
   get '/auth/failure' => 'sessions#failure'
@@ -9,4 +13,7 @@ Rails.application.routes.draw do
   end
   resources :categories
   resources :admin
+  namespace :admin do
+    resources :suggestions, only: :update
+  end
 end

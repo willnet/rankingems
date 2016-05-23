@@ -27,5 +27,5 @@ class Suggestion < ApplicationRecord
 
   validates :category, presence: true
 
-  enum status: { init: 0, resolved: 10, rejected: 20 }
+  enum status: { init: 0, accepted: 10, rejected: 20 }
 end
