@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20160518133727) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_categories_on_name", unique: true, using: :btree
   end
 
   create_table "downloads", force: :cascade do |t|
@@ -54,10 +55,12 @@ ActiveRecord::Schema.define(version: 20160518133727) do
   create_table "suggestions", force: :cascade do |t|
     t.integer  "rubygem_id"
     t.integer  "user_id"
-    t.string   "category",               null: false
-    t.integer  "status",     default: 0, null: false
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.integer  "category_id"
+    t.string   "category_name",             null: false
+    t.integer  "status",        default: 0, null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.index ["category_id"], name: "index_suggestions_on_category_id", using: :btree
     t.index ["rubygem_id"], name: "index_suggestions_on_rubygem_id", using: :btree
     t.index ["status"], name: "index_suggestions_on_status", using: :btree
     t.index ["user_id"], name: "index_suggestions_on_user_id", using: :btree
