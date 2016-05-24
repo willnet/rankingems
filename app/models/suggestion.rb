@@ -30,8 +30,9 @@
 class Suggestion < ApplicationRecord
   belongs_to :rubygem
   belongs_to :user
+  belongs_to :category, optional: true
 
-  validates :category, presence: true
+  validates :category_name, presence: true
 
   enum status: { init: 0, accepted: 10, rejected: 20 }
 end

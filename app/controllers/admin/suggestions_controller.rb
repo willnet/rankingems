@@ -6,7 +6,8 @@ class Admin::SuggestionsController < ApplicationController
     if params[:accept]
       rubygem = suggestion.rubygem
       ActiveRecord::Base.transaction do
-        rubygem.update!(category: suggestion.category)
+        category = Category.find_or_create_by!(name: suggestion.category_name)
+        rubygem.update!(category: category)
         suggestion.accepted!
       end
     else

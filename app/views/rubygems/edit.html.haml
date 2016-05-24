@@ -6,6 +6,6 @@ current category
 
 = form_for [@rubygem, @suggestion] do |f|
   = render 'error', model: @suggestion
-  = f.label :category, 'suggesting category'
-  = f.text_field :category
+  = f.label :category_name, 'suggesting category'
+  = f.text_field :category_name
   = f.submit
