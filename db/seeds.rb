@@ -6,4 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Category.create(name: 'debug')
+
+unless Category.exists?
+  ['Debug Tool', 'Background Processing', 'Benchmarking'].each do |name|
+    Category.create!(name: name)
+  end
+end
