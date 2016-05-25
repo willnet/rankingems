@@ -19,7 +19,6 @@ gem 'omniauth-github'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'rambulance'
 gem 'rack-dev-mark'
-gem 'sprockets', '~> 4.0.0.beta2'
 
 group :development, :test do
   gem 'byebug'
