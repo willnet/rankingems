@@ -19,6 +19,7 @@ gem 'omniauth-github'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'rambulance'
 gem 'rack-dev-mark'
+gem 'react-rails'
 
 group :development, :test do
   gem 'byebug'
