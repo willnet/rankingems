@@ -1,0 +1,23 @@
+{
+  "name": "rankingems",
+  "version": "1.0.0",
+  "description": "You can find popular and well maintained gems quickly!",
+  "main": "index.js",
+  "dependencies": {
+    "react-typeahead-component": "^0.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willnet/rankingems.git"
+  },
+  "author": "willnet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/willnet/rankingems/issues"
+  },
+  "homepage": "https://github.com/willnet/rankingems#readme"
+}
