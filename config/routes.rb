@@ -12,6 +12,9 @@ Rails.application.routes.draw do
     resources :suggestions, only: :create
   end
   resources :categories
+  namespace :api do
+    resources :categories, only: :index
+  end
   resources :admin
   namespace :admin do
     resources :suggestions, only: :update
