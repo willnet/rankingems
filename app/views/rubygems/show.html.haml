@@ -29,8 +29,18 @@ category
 
 %br
 
-= link_to 'project uri', @rubygem.project_uri
-= link_to 'gem uri', @rubygem.gem_uri
-= link_to 'homepage uri', @rubygem.homepage_uri
-= link_to 'wiki uri', @rubygem.wiki_uri
-= link_to 'documentation uri', @rubygem.documentation_uri
+= link_to @rubygem.project_uri do
+  %i.fa.fa-diamond{ 'aria-hidden': true }
+  gem page
+
+= link_to @rubygem.homepage_uri do
+  %i.fa.fa-home{ 'aria-hidden': true }
+  homepage
+
+= link_to @rubygem.wiki_uri do
+  %i.fa.fa-pencil-square-o{ 'aria-hidden': true }
+  wiki
+
+= link_to @rubygem.documentation_uri do
+  %i.fa.fa-book{ 'aria-hidden': true }
+  document
