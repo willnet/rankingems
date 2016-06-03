@@ -3,6 +3,7 @@ class CreateRubygems < ActiveRecord::Migration[5.0]
     create_table :rubygems do |t|
       t.string :name, null: false
       t.string :version, null: false
+      t.string :info
       t.string :authors
       t.string :project_uri
       t.string :gem_uri

@@ -2,7 +2,7 @@ class GemInfo
   include ActiveModel::Model
 
   ATTRIBUTES_FROM_API = %w(
-    name version authors project_uri gem_uri
+    name version info authors project_uri gem_uri
     homepage_uri wiki_uri documentation_uri mailing_list_uri source_code_uri
     bug_tracker_uri licenses
   ).freeze

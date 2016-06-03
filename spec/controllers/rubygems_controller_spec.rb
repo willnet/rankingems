@@ -9,6 +9,7 @@
 # **`id`**                          | `integer`          | `not null, primary key`
 # **`name`**                        | `string`           | `not null`
 # **`version`**                     | `string`           | `not null`
+# **`info`**                        | `string`           |
 # **`authors`**                     | `string`           |
 # **`project_uri`**                 | `string`           |
 # **`gem_uri`**                     | `string`           |

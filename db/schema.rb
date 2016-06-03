@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20160518133727) do
   create_table "rubygems", force: :cascade do |t|
     t.string   "name",                                    null: false
     t.string   "version",                                 null: false
+    t.string   "info"
     t.string   "authors"
     t.string   "project_uri"
     t.string   "gem_uri"
