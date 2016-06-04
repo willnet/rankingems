@@ -69,7 +69,7 @@ GEM
     gems (0.8.3)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
-    hamlit (2.4.0)
+    hamlit (2.5.0)
       temple (~> 0.7.6)
       thor
       tilt
