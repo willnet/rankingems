@@ -1,47 +1,41 @@
 %h1= @rubygem.name
 %h2= @rubygem.info
 
-version
-= @rubygem.version
-
-%br
-
-authors
-= @rubygem.authors
-
-%br
-
-licences
-= @rubygem.licenses.join(',')
-
-%br
-
-download count in 1 month
-= @rubygem.download_count_for_ranking
-
-%br
-
-category
-- if @rubygem.category
-  = link_to @rubygem.category.name, @rubygem.category
-- else
-  N/A
-  = link_to 'suggest a category', edit_rubygem_path(@rubygem)
-
-%br
-
-= link_to @rubygem.project_uri do
-  %i.fa.fa-diamond{ 'aria-hidden': true }
-  gem page
-
-= link_to @rubygem.homepage_uri do
+= link_to @rubygem.homepage_uri, class: 'btn btn-primary' do
   %i.fa.fa-home{ 'aria-hidden': true }
   homepage
 
-= link_to @rubygem.wiki_uri do
+= link_to @rubygem.wiki_uri, class: 'btn btn-primary' do
   %i.fa.fa-pencil-square-o{ 'aria-hidden': true }
   wiki
 
-= link_to @rubygem.documentation_uri do
+= link_to @rubygem.documentation_uri, class: 'btn btn-primary' do
   %i.fa.fa-book{ 'aria-hidden': true }
   document
+
+= link_to @rubygem.project_uri, class: 'btn btn-primary' do
+  %i.fa.fa-diamond{ 'aria-hidden': true }
+  gem page
+
+.list-group
+  .list-group-item
+    %h4.list-group-item-heading Category
+    %p.list-group-item-text
+      - if @rubygem.category
+        = link_to @rubygem.category.name, @rubygem.category
+        = link_to 'suggest a category', edit_rubygem_path(@rubygem)
+      - else
+        N/A
+        = link_to 'suggest a category', edit_rubygem_path(@rubygem)
+  .list-group-item
+    %h4.list-group-item-heading Download count in 1 month
+    %p.list-group-item-text= @rubygem.download_count_for_ranking
+  .list-group-item
+    %h4.list-group-item-heading Version
+    %p.list-group-item-text= @rubygem.version
+  .list-group-item
+    %h4.list-group-item-heading Authors
+    %p.list-group-item-text= @rubygem.authors
+  .list-group-item
+    %h4.list-group-item-heading Licences
+    %p.list-group-item-text= @rubygem.licenses.join(',')
