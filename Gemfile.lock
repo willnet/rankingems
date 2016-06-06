@@ -66,6 +66,8 @@ GEM
     ffi (1.9.10)
     font-awesome-sass (4.6.2)
       sass (>= 3.2)
+    friendly_id (5.1.0)
+      activerecord (>= 4.0.0)
     gems (0.8.3)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
@@ -234,6 +236,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   font-awesome-sass
+  friendly_id (~> 5.1.0)
   gems
   hamlit-rails
   jbuilder (~> 2.0)

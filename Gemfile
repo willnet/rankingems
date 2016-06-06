@@ -20,6 +20,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'rambulance'
 gem 'rack-dev-mark'
 gem 'font-awesome-sass'
+gem 'friendly_id', '~> 5.1.0'
 
 group :development, :test do
   gem 'byebug'
