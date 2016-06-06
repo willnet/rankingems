@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @rubygems = Rubygem.all
+    @categories = Category.order(:name)
   end
 end

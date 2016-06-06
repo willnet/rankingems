@@ -1,2 +1,3 @@
-- @rubygems.each do |rubygem|
-  = link_to rubygem.name, rubygem
+%ul.list-group
+  - @categories.each do |category|
+    %li.list-group-item= link_to category.name, category
