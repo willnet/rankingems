@@ -1,4 +1,5 @@
 %h1=@category.name
 
-- @category.rubygems.each do |rubygem|
-  = link_to rubygem.name, rubygem
+%ul.list-group
+  - @category.rubygems.each do |rubygem|
+    %li.list-group-item= link_to rubygem.name, rubygem
