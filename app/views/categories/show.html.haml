@@ -1,7 +1,7 @@
 %h1=@category.name
 
 %ul.list-group
-  - @category.rubygems.each do |rubygem|
+  - @rubygems.each do |rubygem|
     %li.list-group-item
       %h4.list-group-item-heading= link_to rubygem.name, rubygem
       Download count in 1 month
