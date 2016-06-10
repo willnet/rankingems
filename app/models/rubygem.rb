@@ -24,6 +24,7 @@
 # **`download_count_for_ranking`**  | `integer`          | `default(0), not null`
 # **`created_at`**                  | `datetime`         | `not null`
 # **`updated_at`**                  | `datetime`         | `not null`
+# **`ranking`**                     | `integer`          |
 #
 # ### Indexes
 #

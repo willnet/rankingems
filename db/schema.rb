@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160607094606) do
+ActiveRecord::Schema.define(version: 20160610000548) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 20160607094606) do
     t.integer  "download_count_for_ranking", default: 0,  null: false
     t.datetime "created_at",                              null: false
     t.datetime "updated_at",                              null: false
+    t.integer  "ranking"
     t.index ["category_id"], name: "index_rubygems_on_category_id", using: :btree
     t.index ["name"], name: "index_rubygems_on_name", unique: true, using: :btree
   end
