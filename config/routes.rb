@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   namespace :api do
     resources :categories, only: :index
   end
+  resource :search
   resources :admin
   namespace :admin do
     resources :suggestions, only: :update
