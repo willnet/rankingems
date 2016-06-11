@@ -18,6 +18,13 @@
             %span.icon-bar
           %a.navbar-brand{ href: '/'} Rankingems
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          = form_tag search_path, method: :get, class: 'navbar-form navbar-left' do
+            .form-group
+              .input-group
+                = search_field_tag :name, params[:name], class: 'form-control'
+                %span.input-group-btn
+                  = button_tag class: 'btn btn-default' do
+                    %i.fa.fa-search{"aria-hidden" => "true"}
           %ul.nav.navbar-nav.navbar-right
             - if logged_in?
               %li
