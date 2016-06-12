@@ -25,6 +25,7 @@
 # **`created_at`**                  | `datetime`         | `not null`
 # **`updated_at`**                  | `datetime`         | `not null`
 # **`ranking`**                     | `integer`          |
+# **`slug`**                        | `string`           |
 #
 # ### Indexes
 #
@@ -32,6 +33,8 @@
 #     * **`category_id`**
 # * `index_rubygems_on_name` (_unique_):
 #     * **`name`**
+# * `index_rubygems_on_slug` (_unique_):
+#     * **`slug`**
 #
 
 require 'rails_helper'
