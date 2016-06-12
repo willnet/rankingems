@@ -38,6 +38,9 @@
 #
 
 class Rubygem < ApplicationRecord
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
   has_many :downloads
   has_many :suggestions
   belongs_to :category, optional: true
