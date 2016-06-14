@@ -2,7 +2,7 @@
 
 current category
 
-= @rubygem.category || 'N/A'
+= @rubygem.category&.name || 'N/A'
 
 = form_for [@rubygem, @suggestion] do |f|
   = render 'error', model: @suggestion
