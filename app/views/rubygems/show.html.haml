@@ -1,23 +1,24 @@
 %h1= @rubygem.name
 %h2= @rubygem.info
 
-= link_to @rubygem.homepage_uri, class: 'btn btn-primary' do
-  %i.fa.fa-home{ 'aria-hidden': true }
-  homepage
+.btn-group
+  = link_to @rubygem.homepage_uri, class: 'btn btn-default' do
+    %i.fa.fa-home{ 'aria-hidden': true }
+    homepage
 
-= link_to @rubygem.wiki_uri, class: 'btn btn-primary' do
-  %i.fa.fa-pencil-square-o{ 'aria-hidden': true }
-  wiki
+  = link_to @rubygem.wiki_uri, class: 'btn btn-default' do
+    %i.fa.fa-pencil-square-o{ 'aria-hidden': true }
+    wiki
 
-= link_to @rubygem.documentation_uri, class: 'btn btn-primary' do
-  %i.fa.fa-book{ 'aria-hidden': true }
-  document
+  = link_to @rubygem.documentation_uri, class: 'btn btn-default' do
+    %i.fa.fa-book{ 'aria-hidden': true }
+    document
 
-= link_to @rubygem.project_uri, class: 'btn btn-primary' do
-  %i.fa.fa-diamond{ 'aria-hidden': true }
-  gem page
+  = link_to @rubygem.project_uri, class: 'btn btn-default' do
+    %i.fa.fa-diamond{ 'aria-hidden': true }
+    gem page
 
-.list-group
+.list-group.rubygem-info
   .list-group-item
     %h4.list-group-item-heading Category
     %p.list-group-item-text
