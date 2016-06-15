@@ -1,11 +1,12 @@
 %h1= @rubygem.name
 
-current category
-
-= @rubygem.category&.name || 'N/A'
+%h2
+  current category:
+  = @rubygem.category&.name || 'N/A'
 
 = form_for [@rubygem, @suggestion] do |f|
   = render 'error', model: @suggestion
-  = f.label :category_name, 'suggesting category'
-  = f.text_field :category_name, class: 'typeahead', autocomplete: 'off'
-  = f.submit
+  .form-group
+    = f.label :category_name, 'suggesting category'
+    = f.text_field :category_name, class: 'typeahead form-control', autocomplete: 'off'
+  = f.submit class: 'btn btn-success'
