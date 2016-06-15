@@ -2,7 +2,7 @@ class SuggestionsController < ApplicationController
   before_action :authenticate
 
   def create
-    @rubygem = Rubygem.find(params[:rubygem_id])
+    @rubygem = Rubygem.friendly.find(params[:rubygem_id])
     valid_params = params.require(:suggestion).permit(:category_name)
     @suggestion = @rubygem.suggestions.build(valid_params)
     @suggestion.user = current_user
