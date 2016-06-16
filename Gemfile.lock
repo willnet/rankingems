@@ -1,11 +1,3 @@
-GIT
-  remote: git://github.com/willnet/rack-dev-mark.git
-  revision: 1204dd37f6bba1c4011af8fc91dd238bcf2c07f5
-  branch: fix-bytesize-error
-  specs:
-    rack-dev-mark (0.7.4)
-      rack (>= 1.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -149,6 +141,8 @@ GEM
       railties (>= 3.1, < 5.0)
     rack (2.0.0.rc1)
       json
+    rack-dev-mark (0.7.5)
+      rack (>= 1.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.0.rc1)
@@ -264,7 +258,7 @@ DEPENDENCIES
   pry-rails
   puma
   quiet_assets
-  rack-dev-mark!
+  rack-dev-mark
   rails (>= 5.0.0.beta3, < 5.1)
   rambulance
   rspec-rails (~> 3.0)

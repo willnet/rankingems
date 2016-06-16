@@ -18,7 +18,7 @@ gem 'omniauth'
 gem 'omniauth-github'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'rambulance'
-gem 'rack-dev-mark', github: 'willnet/rack-dev-mark', branch: 'fix-bytesize-error'
+gem 'rack-dev-mark'
 gem 'font-awesome-sass'
 gem 'friendly_id', '~> 5.1.0'
 
