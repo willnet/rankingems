@@ -1,0 +1,6 @@
+heroku maintenance:on --app rankingems
+heroku scale worker=0 --app rankingems
+git push git@heroku.com:rankingems.git $CIRCLE_SHA1:refs/heads/master
+heroku run rake db:migrate --app rankingems
+heroku scale worker=1 --app rankingems
+heroku maintenance:off --app rankingems
