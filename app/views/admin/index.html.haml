@@ -1,18 +1,3 @@
-%h2 Suggestions
-%ul.list-group
-  - @suggestions.each do |suggestion|
-    %li.list-group-item
-      = link_to suggestion.rubygem.name, suggestion.rubygem
-      %br
-      now category:
-      = link_to suggestion.rubygem.category.name, suggestion.rubygem.category
-      %br
-      suggested category:
-      = suggestion.category_name
-      %br
-      by
-      = link_to suggestion.user.github_name, "https://github.com/#{suggestion.user.github_name}"
-      %hr
-      = form_for [:admin, suggestion] do |f|
-        = f.submit 'Accept', name: 'accept', class: 'btn btn-success'
-        = f.submit 'Reject', name: 'reject', class: 'btn btn-danger'
+%h2 Admin page
+
+= link_to 'Suggestions', admin_suggestions_path

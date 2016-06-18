@@ -1,6 +1,10 @@
 class Admin::SuggestionsController < ApplicationController
   before_action :authenticate_admin
 
+  def index
+    @suggestions = Suggestion.init.includes(:rubygem, :user)
+  end
+
   def update
     suggestion = Suggestion.find(params[:id])
     if params[:accept]
