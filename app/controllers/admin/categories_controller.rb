@@ -1,6 +1,4 @@
-class Admin::CategoriesController < ApplicationController
-  before_action :authenticate_admin
-
+class Admin::CategoriesController < Admin::BaseController
   def index
   end
 end

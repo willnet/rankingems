@@ -1,6 +1,4 @@
-class Admin::SuggestionsController < ApplicationController
-  before_action :authenticate_admin
-
+class Admin::SuggestionsController < Admin::BaseController
   def index
     @suggestions = Suggestion.init.includes(:rubygem, :user)
   end

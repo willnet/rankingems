@@ -11,16 +11,6 @@ class ApplicationController < ActionController::Base
     redirect_to '/auth/github'
   end
 
-  def authenticate_admin
-    unless logged_in?
-      authenticate
-      return
-    end
-    return if current_user.admin?
-
-    render 'errors/not_found', status: 404
-  end
-
   private
 
   def current_user
