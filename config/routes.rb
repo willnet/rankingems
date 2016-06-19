@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'welcome#index'
+  root 'welcome#index'
   get '/auth/:provider/callback' => 'sessions#create'
   get '/auth/failure' => 'sessions#failure'
   get '/signout' => 'sessions#destroy', as: :logout
@@ -12,8 +12,8 @@ Rails.application.routes.draw do
     resources :categories, only: :index
   end
   resource :search
-  resources :admin, only: :index
   namespace :admin do
+    root 'welcome#index'
     resources :suggestions, only: %i(index update)
   end
 end
