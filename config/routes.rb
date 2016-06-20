@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   namespace :admin do
     root 'welcome#index'
     resources :suggestions, only: %i(index update)
+    resources :categories
   end
 end

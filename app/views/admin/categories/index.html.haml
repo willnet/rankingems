@@ -1,0 +1,7 @@
+%h2 Edit Categories
+
+- @categories.each do |category|
+  = form_for [:admin, category] do |f|
+    = f.label :name
+    = f.text_field :name
+    = f.submit

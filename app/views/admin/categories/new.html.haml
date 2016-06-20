@@ -1,0 +1,7 @@
+%h2 New Category
+
+= form_for [:admin, @category] do |f|
+  = render 'error', model: @suggestion
+  = f.label :name
+  = f.text_field :name
+  = f.submit
