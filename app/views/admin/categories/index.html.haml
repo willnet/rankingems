@@ -1,7 +1,10 @@
 %h2 Edit Categories
+= link_to 'new category', new_admin_category_path
 
 - @categories.each do |category|
   = form_for [:admin, category] do |f|
-    = f.label :name
-    = f.text_field :name
-    = f.submit
+    .form-group
+      = f.label :name
+      = f.text_field :name, class: 'form-control'
+    = f.submit class: 'btn btn-default'
+  %hr
