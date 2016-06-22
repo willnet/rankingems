@@ -21,6 +21,7 @@ gem 'rambulance'
 gem 'rack-dev-mark'
 gem 'font-awesome-sass'
 gem 'friendly_id', '~> 5.1.0'
+gem 'rollbar'
 
 group :development, :test do
   gem 'byebug'
