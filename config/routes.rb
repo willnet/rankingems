@@ -16,5 +16,6 @@ Rails.application.routes.draw do
     root 'welcome#index'
     resources :suggestions, only: %i(index update)
     resources :categories
+    resources :rubygems
   end
 end
