@@ -23,6 +23,8 @@ gem 'font-awesome-sass'
 gem 'friendly_id', '~> 5.1.0'
 gem 'rollbar'
 gem 'sidekiq'
+gem 'kaminari'
+gem 'kaminari-bootstrap'
 
 group :development, :test do
   gem 'byebug'
