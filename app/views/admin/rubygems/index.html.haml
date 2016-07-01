@@ -3,6 +3,6 @@
 %ul.list-group
   - @rubygems.each do |rubygem|
     %li.list-group-item
-      = link_to rubygem.name, rubygem
+      = link_to rubygem.name, admin_rubygem_path(rubygem)
 
 = paginate @rubygems
