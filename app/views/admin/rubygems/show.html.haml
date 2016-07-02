@@ -1,1 +1,14 @@
 %h2= @rubygem.name
+
+= link_to 'rubygem page for user', @rubygem
+
+download_count_for_ranking:
+
+= @rubygem.download_count_for_ranking
+
+%ul.list-group
+  - @rubygem.downloads.each do |download|
+    %li.list-group-item
+      = download.count
+      downloads
+      = download.created_at
