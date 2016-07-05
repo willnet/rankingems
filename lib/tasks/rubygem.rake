@@ -9,6 +9,6 @@ namespace :rubygem do
   end
 
   task get_all_download_counts: :environment do
-    DownloadCount.perform_async
+    DownloadCountWorker.perform_async
   end
 end
