@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/willnet/rambulance.git
+  revision: 2794139e8b54d5d130443b7ceed7aefa5b544207
+  branch: fix-helper
+  specs:
+    rambulance (0.3.1)
+      actionpack
+      activesupport
+      railties
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -172,10 +182,6 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (11.2.2)
-    rambulance (0.3.1)
-      actionpack
-      activesupport
-      railties
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -270,7 +276,7 @@ DEPENDENCIES
   puma
   rack-dev-mark
   rails (>= 5.0.0)
-  rambulance
+  rambulance!
   rollbar
   rspec-rails (~> 3.5)
   sass-rails (~> 5.0)
