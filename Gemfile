@@ -25,7 +25,7 @@ gem 'rollbar'
 gem 'sidekiq'
 gem 'kaminari'
 gem 'kaminari-bootstrap'
-gem 'sinatra', require: false
+gem 'sinatra', github: 'sinatra/sinatra', require: false
 
 group :development, :test do
   gem 'byebug'

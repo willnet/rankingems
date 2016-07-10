@@ -1,3 +1,5 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
   root 'welcome#index'
   get '/auth/:provider/callback' => 'sessions#create'
@@ -19,6 +21,5 @@ Rails.application.routes.draw do
     resources :rubygems
   end
 
-  require 'sidekiq/web'
   mount Sidekiq::Web => '/sidekiq', constraints: AdminConstraint.new
 end
