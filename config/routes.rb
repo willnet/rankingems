@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   end
   resource :search
   namespace :admin do
-    root 'welcome#index'
+    root 'welcome#index', as: :root
     resources :suggestions, only: %i(index update)
     resources :categories
     resources :rubygems
