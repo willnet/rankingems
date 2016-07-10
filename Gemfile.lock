@@ -217,6 +217,8 @@ GEM
       concurrent-ruby (~> 1.0)
       connection_pool (~> 2.2, >= 2.2.0)
       redis (~> 3.2, >= 3.2.1)
+    sinatra (1.0)
+      rack (>= 1.0)
     slop (3.6.0)
     spring (1.7.2)
     spring-watcher-listen (2.0.0)
@@ -281,6 +283,7 @@ DEPENDENCIES
   rspec-rails (~> 3.5)
   sass-rails (~> 5.0)
   sidekiq
+  sinatra
   spring
   spring-watcher-listen (~> 2.0.0)
   therubyracer

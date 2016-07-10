@@ -18,4 +18,7 @@ Rails.application.routes.draw do
     resources :categories
     resources :rubygems
   end
+
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq', constraints: AdminConstraint.new
 end
