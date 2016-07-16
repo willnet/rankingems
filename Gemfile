@@ -28,6 +28,7 @@ gem 'kaminari-bootstrap'
 gem 'sinatra', github: 'sinatra/sinatra', require: false
 gem 'letsencrypt_rack'
 gem 'letsencrypt_heroku', require: false
+gem 'json-jwt', '1.5.2'
 
 group :development, :test do
   gem 'byebug'
