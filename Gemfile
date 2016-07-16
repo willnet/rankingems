@@ -26,6 +26,8 @@ gem 'sidekiq'
 gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem 'sinatra', github: 'sinatra/sinatra', require: false
+gem 'letsencrypt_rack'
+gem 'letsencrypt_heroku', require: false
 
 group :development, :test do
   gem 'byebug'
