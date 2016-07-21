@@ -45,6 +45,8 @@ class Rubygem < ApplicationRecord
   has_many :suggestions
   belongs_to :category, optional: true
 
+  scope :no_category, -> { where(category_id: nil) }
+
   class << self
     def latest_update!
       GemInfo.just_updated.reject(&:persisted?).each do |gem_info|
