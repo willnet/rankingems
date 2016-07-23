@@ -1,0 +1,17 @@
+%h1
+  Search results for:
+  = "'#{params[:name]}'"
+
+%h2 Categories
+
+%ul.list-group
+  - @categories.each do |category|
+    %li.list-group-item
+      = link_to category.name, category
+
+%h2 Rubygems
+
+%ul.list-group
+  - @rubygems.each do |rubygem|
+    %li.list-group-item
+      = link_to rubygem.name, rubygem

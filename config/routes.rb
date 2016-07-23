@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     resources :suggestions, only: %i(index update)
     resources :categories
     resources :rubygems
+    resource :search
   end
 
   mount Sidekiq::Web => '/sidekiq', constraints: AdminConstraint.new
