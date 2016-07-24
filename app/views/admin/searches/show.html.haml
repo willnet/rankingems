@@ -7,11 +7,11 @@
 %ul.list-group
   - @categories.each do |category|
     %li.list-group-item
-      = link_to category.name, category
+      = link_to category.name, admin_rubygems_path(category)
 
 %h2 Rubygems
 
 %ul.list-group
   - @rubygems.each do |rubygem|
     %li.list-group-item
-      = link_to rubygem.name, rubygem
+      = link_to rubygem.name, admin_rubygem_path(rubygem)
