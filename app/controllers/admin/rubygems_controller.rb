@@ -14,4 +14,12 @@ class Admin::RubygemsController < Admin::BaseController
   def show
     @rubygem = Rubygem.friendly.find(params[:id])
   end
+
+  def update
+    @rubygem = Rubygem.friendly.find(params[:id])
+    if @rubygem.update(params.require(:rubygem).permit(:category_id))
+      flash[:notice] = 'Successfully updated!'
+    end
+    render :show
+  end
 end

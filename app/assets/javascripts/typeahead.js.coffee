@@ -1,8 +1,11 @@
 $(document).on 'ready page:load', ->
   $input = $('.typeahead')
-  $input.typeahead source: (query, process) ->
-    $.get
-      url: '/api/categories'
-      data:
-        q: query
-      success: process
+  $input.typeahead
+    afterSelect: (item) ->
+      $('[name="rubygem[category_id]"]').val(item.id)
+    source: (query, process) ->
+      $.get
+        url: '/api/categories'
+        data:
+          q: query
+        success: process
