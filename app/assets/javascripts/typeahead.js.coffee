@@ -1,4 +1,4 @@
-$(document).on 'ready page:load', ->
+$(document).on 'ready turbolinks:render', ->
   $input = $('.typeahead')
   $input.typeahead
     afterSelect: (item) ->
