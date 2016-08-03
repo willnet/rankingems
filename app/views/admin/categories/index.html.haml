@@ -1,5 +1,5 @@
 %h2 Edit Categories
-= link_to 'new category', new_admin_category_path
+= link_to 'new category', new_admin_category_path, class: 'btn btn-info'
 
 - @categories.each do |category|
   = form_for [:admin, category] do |f|
@@ -9,3 +9,5 @@
     = f.submit class: 'btn btn-default'
   = link_to 'Rubygems', admin_rubygems_path(category_id: category.id)
   %hr
+
+= paginate @categories
