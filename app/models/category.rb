@@ -25,4 +25,6 @@ class Category < ApplicationRecord
   friendly_id :name, use: :slugged
 
   has_many :rubygems
+
+  validates :name, uniqueness: true
 end
