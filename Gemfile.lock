@@ -8,6 +8,15 @@ GIT
       rack-protection (~> 1.5)
       tilt (~> 2.0)
 
+GIT
+  remote: git://github.com/yuki24/rambulance.git
+  revision: feadcba2ded7f5be8042cac93960f21d453266b4
+  specs:
+    rambulance (0.3.1)
+      actionpack
+      activesupport
+      railties
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -212,10 +221,6 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rainbow (2.1.0)
     rake (11.2.2)
-    rambulance (0.3.1)
-      actionpack
-      activesupport
-      railties
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -320,7 +325,7 @@ DEPENDENCIES
   rack-dev-mark
   rails (>= 5.0.0)
   rails_12factor
-  rambulance
+  rambulance!
   rollbar
   rspec-rails (~> 3.5)
   sass-rails (~> 5.0)
