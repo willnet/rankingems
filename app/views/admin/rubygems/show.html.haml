@@ -10,7 +10,7 @@ download_count_for_ranking:
   = render 'error', model: @rubygem
   .form-group
     = f.label :category_name, 'category'
-    = text_field_tag :category_name, @rubygem.category.name, class: 'typeahead form-control', autocomplete: 'off'
+    = text_field_tag :category_name, @rubygem.category&.name, class: 'typeahead form-control', autocomplete: 'off'
   = f.hidden_field :category_id
   = f.submit class: 'btn btn-success'
 
