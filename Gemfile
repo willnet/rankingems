@@ -29,7 +29,6 @@ gem 'sinatra', github: 'sinatra/sinatra', require: false
 gem 'letsencrypt_rack'
 gem 'letsencrypt_heroku', require: false
 gem 'json-jwt', '1.5.2'
-gem 'rails_12factor', group: :production
 gem 'rack-canonical-host'
 
 group :development, :test do
