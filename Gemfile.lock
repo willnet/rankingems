@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/sinatra/sinatra.git
-  revision: aa1f6f952e243f82e918cb0335d420f4281e91ef
+  revision: 6b5a0ef3a4598366138fefe3f2b696ddeb371f3c
   specs:
     rack-protection (2.0.0)
       rack
@@ -22,7 +22,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    acme-client (0.4.0)
+    acme-client (0.4.1)
       faraday (~> 0.9, >= 0.9.1)
     actioncable (5.0.0.1)
       actionpack (= 5.0.0.1)
@@ -98,7 +98,7 @@ GEM
     gems (0.8.3)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
-    hamlit (2.6.0)
+    hamlit (2.6.1)
       temple (~> 0.7.6)
       thor
       tilt
@@ -129,7 +129,7 @@ GEM
     kaminari-bootstrap (3.0.1)
       kaminari (>= 0.13.0)
       rails
-    letsencrypt_heroku (0.2.3)
+    letsencrypt_heroku (0.2.4)
       acme-client
       json-jwt (= 1.5.2)
       rainbow
