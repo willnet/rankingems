@@ -26,5 +26,5 @@ class Category < ApplicationRecord
 
   has_many :rubygems
 
-  validates :name, uniqueness: true
+  validates :name, presence: true, uniqueness: true
 end
