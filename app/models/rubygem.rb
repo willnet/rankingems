@@ -72,7 +72,7 @@ class Rubygem < ApplicationRecord
   def save_total_download_count!
     download_info = Gems.total_downloads(name)
     # deleted gem return "This rubygem could not be found."
-    return if download_info[:total_downloads].instance_of? String
+    return if download_info.instance_of? String
     downloads.create!(count: download_info[:total_downloads])
   end
 
