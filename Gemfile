@@ -30,6 +30,7 @@ gem 'letsencrypt_rack'
 gem 'letsencrypt_heroku', require: false
 gem 'json-jwt', '1.5.2'
 gem 'rack-canonical-host'
+gem 'honobono', github: 'willnet/honobono'
 
 group :development, :test do
   gem 'byebug'

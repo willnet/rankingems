@@ -11,6 +11,13 @@ GIT
       tilt (~> 2.0)
 
 GIT
+  remote: git://github.com/willnet/honobono.git
+  revision: ddedf4627ff17d1f2c2b4cd57dcbfe391fa94062
+  specs:
+    honobono (0.0.1)
+      rake
+
+GIT
   remote: git://github.com/yuki24/rambulance.git
   revision: feadcba2ded7f5be8042cac93960f21d453266b4
   specs:
@@ -300,6 +307,7 @@ DEPENDENCIES
   friendly_id (~> 5.1.0)
   gems
   hamlit-rails
+  honobono!
   jbuilder (~> 2.0)
   jquery-rails
   json-jwt (= 1.5.2)
@@ -333,4 +341,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.12.5
+   1.13.0.rc.2
