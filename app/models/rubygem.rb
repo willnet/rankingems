@@ -60,6 +60,10 @@ class Rubygem < ApplicationRecord
       create_or_update!(gem_info)
     end
 
+    def update_download_count_for_ranking!
+      find_each(&:update_download_count_for_ranking!)
+    end
+
     private
 
     def create_or_update!(gem_info)
