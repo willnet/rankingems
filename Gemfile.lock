@@ -12,7 +12,7 @@ GIT
 
 GIT
   remote: git://github.com/willnet/honobono.git
-  revision: b30ac9098c8850b3ba3d5a5149ba4ecb9eb53bc8
+  revision: fd43a0166c402e43ed53a38ef1d510e56f138c62
   specs:
     honobono (0.0.1)
       rake
