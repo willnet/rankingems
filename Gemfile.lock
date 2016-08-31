@@ -12,7 +12,7 @@ GIT
 
 GIT
   remote: git://github.com/willnet/honobono.git
-  revision: f7155766e159283072bc6e2320812393749f4f79
+  revision: b30ac9098c8850b3ba3d5a5149ba4ecb9eb53bc8
   specs:
     honobono (0.0.1)
       rake
@@ -105,7 +105,7 @@ GEM
     gems (0.8.3)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
-    hamlit (2.6.2)
+    hamlit (2.7.0)
       temple (~> 0.7.6)
       thor
       tilt
