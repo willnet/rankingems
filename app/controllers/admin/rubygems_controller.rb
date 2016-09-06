@@ -8,7 +8,7 @@ class Admin::RubygemsController < Admin::BaseController
       rubygem = Rubygem.no_category
       @category_name = 'No Category'
     end
-    @rubygems = rubygem.page(params[:page]).per(20).all
+    @rubygems = rubygem.order(download_count_for_ranking: :desc).page(params[:page]).per(20).all
   end
 
   def show
