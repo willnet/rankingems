@@ -83,7 +83,7 @@ class Rubygem < ApplicationRecord
   def update_download_count_for_ranking!
     duration = 1.month
     old_download = downloads.where('created_at >= ?', duration.ago)
-                            .order(created_at: :desc).first
+                            .order(:created_at).first
     unless old_download
       logger.warn "Batch of Download count maybe something wrong - rubygem#id: #{id}"
       return
