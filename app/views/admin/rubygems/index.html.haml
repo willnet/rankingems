@@ -1,6 +1,14 @@
 %h2 Rubygems
 %h3= @category_name
 
+= form_tag admin_rubygems_path do
+  .form-group
+    %label
+      Name
+      = text_field_tag 'name', nil, class: 'form-control'
+    = submit_tag 'Create new gem', class: 'btn btn-default'
+
+
 %ul.list-group
   - @rubygems.each do |rubygem|
     %li.list-group-item

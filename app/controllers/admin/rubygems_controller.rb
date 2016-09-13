@@ -15,6 +15,15 @@ class Admin::RubygemsController < Admin::BaseController
     @rubygem = Rubygem.friendly.find(params[:id])
   end
 
+  def create
+    if Rubygem.create_or_update_from_name(params[:name])
+      flash[:notice] = "successfully created: #{params[:name]}"
+    else
+      flash[:alert] = "fail to create: #{params[:name]}"
+    end
+    redirect_to admin_rubygems_path
+  end
+
   def update
     @rubygem = Rubygem.friendly.find(params[:id])
     if @rubygem.update(params.require(:rubygem).permit(:category_id))
