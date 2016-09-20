@@ -103,7 +103,7 @@ GEM
     gems (0.8.3)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
-    hamlit (2.7.0)
+    hamlit (2.7.2)
       temple (~> 0.7.6)
       thor
       tilt
@@ -127,7 +127,7 @@ GEM
       multi_json (>= 1.3)
       securecompare
       url_safe_base64
-    jwt (1.5.5)
+    jwt (1.5.6)
     kaminari (0.17.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
