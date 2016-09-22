@@ -177,7 +177,7 @@ GEM
     omniauth-oauth2 (1.4.0)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
-    pg (0.18.4)
+    pg (0.19.0)
     pkg-config (1.1.7)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -226,7 +226,7 @@ GEM
       ffi (>= 0.5.0)
     redis (3.3.1)
     ref (2.0.0)
-    rollbar (2.13.0)
+    rollbar (2.13.1)
       multi_json
     rspec-core (3.5.3)
       rspec-support (~> 3.5.0)
