@@ -134,7 +134,7 @@ GEM
     kaminari-bootstrap (3.0.1)
       kaminari (>= 0.13.0)
       rails
-    letsencrypt_heroku (0.2.4)
+    letsencrypt_heroku (0.2.5)
       acme-client
       json-jwt (= 1.5.2)
       rainbow
