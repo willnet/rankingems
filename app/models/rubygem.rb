@@ -70,6 +70,7 @@ class Rubygem < ApplicationRecord
       rubygem = find_or_initialize_by(name: gem_info.name)
       rubygem.attributes = gem_info.attributes
       rubygem.save!
+      rubygem
     end
   end
 

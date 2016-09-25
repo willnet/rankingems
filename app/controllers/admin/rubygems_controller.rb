@@ -16,12 +16,12 @@ class Admin::RubygemsController < Admin::BaseController
   end
 
   def create
-    if Rubygem.create_or_update_from_name(params[:name])
+    if rubygem = Rubygem.create_or_update_from_name(params[:name])
       flash[:notice] = "successfully created: #{params[:name]}"
     else
       flash[:alert] = "fail to create: #{params[:name]}"
     end
-    redirect_to admin_rubygems_path
+    redirect_to admin_rubygem_path(rubygem)
   end
 
   def update
