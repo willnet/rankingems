@@ -17,9 +17,9 @@ GIT
 
 GIT
   remote: git://github.com/yuki24/rambulance.git
-  revision: debab75cf8ac8923db49064eedd9b1f74848997d
+  revision: f1224a2e708cbcc4ec8eea90d49af32027497ee2
   specs:
-    rambulance (0.3.1)
+    rambulance (0.4.0)
       actionpack
       activesupport
       railties
@@ -103,7 +103,7 @@ GEM
     gems (0.8.3)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
-    hamlit (2.7.2)
+    hamlit (2.7.3)
       temple (~> 0.7.6)
       thor
       tilt
