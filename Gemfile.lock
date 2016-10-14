@@ -17,7 +17,7 @@ GIT
 
 GIT
   remote: https://github.com/yuki24/rambulance.git
-  revision: f1224a2e708cbcc4ec8eea90d49af32027497ee2
+  revision: b5882530a8bdfe6d26512a93d9fd943d356fe046
   specs:
     rambulance (0.4.0)
       actionpack
