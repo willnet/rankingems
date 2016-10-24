@@ -39,4 +39,4 @@
     %p.list-group-item-text= @rubygem.authors
   .list-group-item
     %h4.list-group-item-heading Licences
-    %p.list-group-item-text= @rubygem.licenses.join(',')
+    %p.list-group-item-text= @rubygem.licenses&.join(',')
