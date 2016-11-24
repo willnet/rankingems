@@ -2,6 +2,8 @@ GIT
   remote: https://github.com/sinatra/sinatra.git
   revision: af6dad2a6c31e31617712b15f455b2a3d3eb1c06
   specs:
+    rack-protection (2.0.0.beta2)
+      rack
     sinatra (2.0.0.beta2)
       mustermann (= 1.0.0.beta2)
       rack (~> 2.0)
@@ -190,8 +192,6 @@ GEM
       rack (>= 1.0.0, < 3)
     rack-dev-mark (0.7.5)
       rack (>= 1.1)
-    rack-protection (2.0.0.beta2)
-      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.0.1)
